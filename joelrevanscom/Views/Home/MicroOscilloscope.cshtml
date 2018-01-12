@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Micro Oscilloscope";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section Head{
+    <script defer src="/scripts/imagecarousel.js"></script>
+}
+
+@section Foot{
+    <link href="/styles/imagecarousel.css" rel="stylesheet" type="text/css" />
+}
+
+<h1>Micro Oscilloscope <time datetime="2013-04">(2013)</time></h1>
+<p>
+    The micro oscilloscope project is an extension of the Wideband Voltmeter documented in this section.  The oscilloscope does not possess
+    any of the hardware for high-voltage AC, but instead focuses on interface, using some of the more interesting features of the controller kit.
+    <br />
+    The micro oscilloscope has a monochrome 128x64 OLED display.  The controller charts 1024 floating point values on the display, aggregating samples
+    where necessary to achieve an accurate and intuitive display with only 128x52 pixels available for the chart.  The scope has full support for triggers,
+    configurable sampling time and voltage ranges, as well as pausing for precise traces.  Maximum sample rate of 100Khz.
+</p>
+<a href="/files/Oscilloscope.zip" class="BigBlueButton">
+    Download Project Files
+</a>
+
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Micro Oscilloscope/image6.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Micro Oscilloscope/image5.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Micro Oscilloscope/image0.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Micro Oscilloscope/image3.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Micro Oscilloscope/image1.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Micro Oscilloscope/image2.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Micro Oscilloscope/image4.jpg", width = 100 }
+    });
+}

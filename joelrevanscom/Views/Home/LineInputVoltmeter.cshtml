@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "LineinVolmeter";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section Head{
+    <script defer src="/scripts/imagecarousel.js"></script>
+}
+
+@section Foot{
+    <link href="/styles/imagecarousel.css" rel="stylesheet" type="text/css" />
+}
+
+<h1>Line-In Voltmeter <time datetime="2010-07">(2010)</time></h1>
+<h2>Design:</h2>
+<p>
+    The line-in voltmeter is a partner to the Audio Relay Switch outlined below.  The two modules are intended to allow a vast number of computing devices
+    to interface with and control external hardware modules without the need for complex or hardware-dependent drivers. The 44Khz scope is designed to
+    receive a signal between +5 and 0 volts. It feeds this voltage through a resistor into the base of an NPN transistor.
+    The transistor is attached to a 555 timer that outputs into the collector of the transistor. The effect is that the oscillator output is modulated
+    by the NPN transistor, and the resulting PWM signal is stepped down, but proportional in magnitude of the input voltage on the NPN. This DC-AC
+    conversion is necessary because line inputs are equipped with a high-pass filter to attenuate DC current.
+</p>
+<h2>Results:</h2>
+<p>
+    The device worked as intended, boasting 4-channels of input. I did not test at higher frequencies, as the current intended purpose did not call for
+    it, but it was acceptable for measuring knobs, button pushes, and other voltage-dependent sensors.
+</p>
+<h2>Reflections:</h2>
+<p>
+    This design has been dicontinued due to a few key flaws in its design. The common-ground BJT amplifiers become unreliable when targeting devices with high internal
+    resistance. The voltage-sensing resistor is set to 10k, and since the beta cannot be raised to accomodate a higher base resistor, the current will be too
+    skewed to accurately represent inputs.<br />
+    Another key flaw was external to the device. Inputs to computers are not well standardized. The resistance
+    of line inputs may vary between hardware, and many computers omit the line interface at all. It would have improved the design had I reserved two
+    of the op-amps for stabilizing DC-offset, rather than adding an additional two channels to the design. This would have allowed the device to operate
+    with microphone inputs in addition to line inputs, diversifying the available level of host hardware. Most computers do not possess more than one
+    easily-accessible microphone or line input, so this tradeoff is generally favorable.
+</p>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Analog Voltage Scope/image1.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Analog Voltage Scope/image2.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Analog Voltage Scope/image3.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Analog Voltage Scope/image4.jpg", width = 100 }
+    });
+}

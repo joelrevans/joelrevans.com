@@ -1,0 +1,47 @@
+﻿@using joelrevanscom
+@using System.Text.RegularExpressions;
+@model IEnumerable<CarouselImage>
+
+@{
+    Random rand = new Random();
+    string carouselID = "ic" + rand.Next().ToString();
+}
+
+<input id="@carouselID" type="radio" name="carousel"/>
+<div class="ImageCarousel ScriptOnly">
+     @foreach (CarouselImage th in Model)
+     {
+         string itemid = "inp" + th.src.GetHashCode();
+         string path = Path.GetDirectoryName(th.src).Replace('\\', '/');
+         string filename = Path.GetFileNameWithoutExtension(th.src);
+         Regex pattern = new Regex("/images/");
+         string bigImgPath = $"{pattern.Replace(path, "/imagecache/", 1)}/{filename}-w900.jpg";
+         string lilImgPath = $"{pattern.Replace(path, "/imagecache/", 1)}/{filename}-w100.jpg";
+
+
+        <input id="@itemid" type="radio" name="carousel" />
+        <div>
+            <label for="@itemid" class="overlabel"></label>
+            <label for="@carouselID">
+                <img src="@bigImgPath" class="ScriptOnly"
+                    @if(th.alt !=null){
+                        @("alt='" + @th.alt + "'")
+                    }
+                    @if(th.title !=null)
+                    {
+                        @("title='" + @th.title + "'")
+                    } />
+                <noscript>
+                    <img src="@bigImgPath"
+                         @if(th.alt !=null){
+                            @("alt='" + @th.alt + "'")
+                         }
+                         @if(th.title !=null)
+                         {
+                            @("title='" + @th.title + "'")
+                         } />
+                </noscript>
+            </label>
+        </div>
+     }
+</div>

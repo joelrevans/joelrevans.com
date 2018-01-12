@@ -1,0 +1,74 @@
+﻿#ResumeLinks{
+    text-align:center;
+    margin:20px;
+}
+
+@media print{
+    #ResumeLinks{
+        display:none;
+    }
+}
+
+#ResumeContainer {
+    font-family : Calibri, Helvetica, sans-serif;
+    font-size:11pt;
+    max-width:8.5in;
+    padding-right:.5in;
+    box-sizing:border-box;
+    margin:auto;
+}
+
+#ResumeContainer .centered{
+    text-align:center;
+}
+#ResumeContainer .indented{
+    padding-left:0.5in;
+}
+
+#ResumeContainer .spaced{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+
+#ResumeContainer #Skills h2{
+    display:inline-block;
+    width:120px;
+}
+
+#ResumeContainer #Skills li {
+    display:inline-block;
+}
+
+#ResumeContainer #Skills li:not(:last-child):after{
+    content:','
+}
+
+#ResumeContainer #Skills h2, #Skills ul {
+    display:inline-block;
+    margin:0;
+}
+
+#ResumeContainer #Skills ul {
+    list-style-type:none;
+    padding:0;
+}
+
+#ResumeContainer h1 {
+    font-size:1.1em;
+}
+
+#ResumeContainer h2 {
+    font-size:1em;
+}
+
+#ResumeContainer .TimeRange {
+    float:right;
+}
+
+#ResumeContainer .IndentedContent {
+    padding-left:3em;
+}
+
+#ResumeContainer address{
+    font-style:normal
+}

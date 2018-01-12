@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "ZombieCop";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section Head{
+    <script defer src="/scripts/imagecarousel.js"></script>
+}
+
+@section Foot{
+    <link href="/styles/imagecarousel.css" rel="stylesheet" type="text/css" />
+}
+
+<h1>Zombie Cop <time datetime="2009">(2009-</time><time datetime="2011">2011)</time></h1>
+<p>
+    Zombie Cop was in development for about 3 years, sporadically, and has received around 400 thousand views to date.  For this project, I had to learn Actionscript 3,
+    as well as Object Oriented Programming styles and syntax.  The class-based approach improved my code quality and reusability greatly, and contributed greatly to the
+    quality of the final product.
+    <br /><br />
+    The framework is far more robust than any of my previous programming projects.  The game uses a heavily optimized and advanced pathing algorithm.  It can handle up to
+    50 units in realtime while maintaining optimal performance.  The pathing algorithm is built upon a robust set of classes for processing two-dimensional vectors.  The
+    vector classes are responsible for collision detection and unit targeting.  Layered upon that is the unit AI library, which is simple, but stable and performs well.
+    The game is rendered entirely with a bitmap blitting camera system, for efficient use of visual resources.  I did not assemble any of the graphics in the Adobe Flash
+    IDE or a similar visual editor.  I instead embedded bitmaps and animated them using custom clip-management classes.
+</p>
+<a class="BigBlueButton" href="https://github.com/joelrevans/Zombie-Cop" target="_blank">
+    View Source
+</a>
+
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Zombie Cop/image1.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Zombie Cop/image2.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Zombie Cop/image5.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Zombie Cop/image3.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Zombie Cop/image4.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Zombie Cop/image6.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Zombie Cop/image7.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Zombie Cop/image8.jpg", width = 100 }
+    });
+}

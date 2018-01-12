@@ -1,0 +1,468 @@
+﻿
+@{
+    ViewBag.Title = "DyeSynthesizer";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section Head{
+    <script defer src="/scripts/imagecarousel.js"></script>
+}
+
+@section Foot{
+    <link href="/styles/imagecarousel.css" rel="stylesheet" type="text/css" />
+}
+
+<h1>
+    Dye Synthesizer <time datetime="2014-03">(2014)</time>
+</h1>
+<p>
+    The Metrochrome Dye Synthesizer is a system that a <a href="http://mikebosken.com" target="_blank">colleague</a> and I built over the course of a four-month period.  The purpose of the machine is to
+    automate the production of dyed silks in small quantities, a process necessary for the preservation of historic textiles.
+</p>
+<h2>
+    Original Process
+</h2>
+<p>
+    The process upon which our machine is based is normally performed by a trained technician or conservator.  As a first step to begin designing a process,
+    it was necessary to produce a set of fabrics manually.  Dying silk can be very labor intensive and time consuming, and the necessary steps are outlined below:
+</p>
+<ul>
+    <li>
+        Determine the weight of the fabric to be dyed.
+    </li>
+    <li>
+        Produce a set of base dye solutions by weighing out the powdered dye and dilutingext=
+        with a precise amount of water. A set of pH levelling additives must be included as well.
+    </li>
+    <li>
+        Determine the desired color, consult a chromatic key or formula sheet to approximate your color.
+    </li>
+    <li>
+        Mix the dyes in with the additives and then introduce the fabric.
+    </li>
+    <li>
+        Begin heating the solution to 90&deg;C over the course of 20 minutes.
+    </li>
+    <li>
+        Once the solution reaches 90&deg;C, hold at that temperature for another 30 minutes.
+    </li>
+    <li>
+        Allow the solutions to cool and prepare to harvest the fabric.
+    </li>
+    <li>
+        After the incubation period, the dyes should be nearly exhausted and will appear transparent.
+    </li>
+    <li>
+        Rinse the chambers and fabric thoroughly.  Failure to clean properly may lead to contamination in future batches.
+    </li>
+    <li>
+        Allow the fabrics to dry and iron when ready.
+    </li>
+</ul>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image113.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image121.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image120.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image118.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image119.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image116.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image117.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image114.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image115.jpg", width = 100 }
+    });
+}
+<h2>
+    Subsystem Determination
+</h2>
+<p>
+    After analysis and discussion, we were able to distill the process down into four basic subsystems:
+    <br /><br />
+    <b>Climate control</b> to accurately achieve and maintain the required temperature.  For this system we would need
+    an appropriately sized heating element and feedback sensors to correct inaccuracies.
+    <br />
+    <b>Agitation</b> module to keep the dye concentration evenly distributed and prevent premature exhaustion.  This would
+    likely require an agitation motor, fluid pump, or actuator to reposition the chamber.
+    <br />
+    <b>Liquid disposal</b> system to drain the excess dye and allow the material to begin drying.  This system would require a valve
+    system or actuator to empty the container without flushing the fabric.
+    <br />
+    <b>Fluid mixing</b> to accurately meter the appropriate amounts of dye and additives into the incubation chamber.  This system
+    would require a pressurized injection system or volume measuring capabilities to accurately dispense fluid.
+</p>
+<h2>
+    Fluid Input Chambers
+</h2>
+<p>
+    We managed to pick up a box of acrylic testing chambers at a surplus sale.  The containers were used in a geological testing lab,
+    and still had a siginficiant mineral deposits.  They were inspected and cleaned thoroughly to avoid any contamination with the dyes.
+</p>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image1.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image2.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image5.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image6.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image7.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image9.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image94.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image97.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image100.jpg", width = 100 }
+    });
+}
+<h2>
+    Fluid Pressure System
+</h2>
+<p>
+    We managed to acquire a industrial-grade lab compressor which was both quiet and small enough to use indoors.
+    The compressor did not have a pressure control system, so an adjustable blowoff valve was the first attempt
+    at regulating the air pressure in the lines.  We were able to repurpose one of the acrylic lids to make the
+    attachment and and we used the same interface to connect the chambers in parallel to the source.
+</p>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image101.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image102.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image8.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image95.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image96.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image10.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image98.jpg", width = 100 }
+    });
+}
+<h2>
+    Dye Injection System
+</h2>
+<p>
+    In addition to pressurized fluid chambers, the machine needs a way of precisely metering liquid into the mixing chamber.
+    We acquired a set of high-performance automotive fuel injectors for that purpose.  Motorcycle injectors are low-flow, but
+    allow for extremely high switching speeds as they are often used in engines that reach 20,000RPM.  The injectors we
+    acquired are able to cycle more than 500 times a second, and have a maximum flow rating of 70cc/min.  This gives us the
+    system extremely precise microliter level control over the fluid injection.
+</p>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image103.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image13.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image104.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image105.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image106.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image14.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image107.jpg", width = 100 }
+    });
+}
+<h2>
+    Frame and Mounting
+</h2>
+<p>
+    Needing a frame to mount the project to, I managed to acquire a nice oak cabinet at a thrift store.
+    Mounting our components proceeded quickly.
+</p>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image15.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image16.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image17.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image19.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image21.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image24.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image25.jpg", width = 100 }
+    });
+}
+<h2>
+    Incubation Chambers
+</h2>
+<p>
+    I took the opportunity to acquire a large quantity of stackable, hard plastic lab containers at another
+    surplus sale.  We decided to modify our original design to take advantage of the container stack-ability;
+    Instead of using agitator motors or pumps to keep the solution mixed, we took advantage of our common
+    air pressure line.  By stacking two containers and pressurizing the bottom, we could cause our fluid in
+    the top container to bubble and diffuse.  We would need to prevent the fluid in the top container from
+    entering the bottom container, something that we can achieve with a hydrophobic filter.
+</p>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image27.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image28.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image29.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image108.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image109.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image110.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image20.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image30.jpg", width = 100 }
+    });
+}
+<h2>
+    Hydrophobic Filters
+</h2>
+<p>
+    After myriad product tests, we acquired two filters that had the potential to function as we needed.
+    One type of filter was intended for use on snowmobile and marine vehicles as a hydrophobic intake/vent cover, to prevent
+    water from entering the intake or exhaust of an engine.  The other was a medical-grade filter,
+    primarily used for membrane filtration and pressure equalization.  The filters had to meet two criteria:
+    they needed to be resistant to temperatures of up to 100&deg;C and they needed to allow air to pass while
+    rejecting all fluid.  The medical filters, being rated for 260&deg;C, were extremely resilient and had only
+    minor leaks (only when silicone was used).  The automotive vents held up well initially, but
+    leaked badly when introduced to boiling water.
+</p>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image32.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image111.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image31.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image33.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image40.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image41.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image42.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image43.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image44.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image35.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image36.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image34.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image37.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image38.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image39.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image45.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image46.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image47.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image51.jpg", width = 100 }
+    });
+}
+<h2>
+    Temperature Control
+</h2>
+<p>
+    The dye curing process for silk requires that the fabric be incubated with the dye at 90&deg;C for at least thirty minutes.
+    If the temperature climbs too high, the silk may be damaged.  If the solution is not hot enough the process will take longer
+    and may negatively affect the lightfastness and dye absorption.  To achieve precise temperature measurement, we use the DS18B20
+    temperature probe.  This model of sensor is very unique because it outputs a digital signal.  A group of these sensors may be connected
+    in parallel to a single data wire, and will automatically organize themselves to serialize their communications over the bus.
+    They may also be operated without a power line, as they are efficient enough to run on the data signal alone.  The parallel bus was
+    instrumental in allowing us to run multiple chambers without surpassing the I/O limit of the controller.
+</p>
+<p>
+    For the heater output, we used automotive bulbs.  They were cheap, robust, and hot!  We chose bulbs for their radiant
+    heat output, as we did not want to introduce anything into contact with the dye that might form deposits or cause
+    contamination between batches.  We did need to confirm that the bulbs would operate in a high humidity environment, however,
+    so we operated them underwater for a few hours before mounting.  To mount we used high-grade automotive silicone, designed
+    to create gaskets for internal combustion engines.  The bulbs can easily exceed 300&deg;C.
+</p>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image112.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image65.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image52.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image48.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image49.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image50.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image55.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image56.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image57.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image58.jpg", width = 100 }
+    });
+}
+<h2>
+    Drain System
+</h2>
+<p>
+    After the silk has been incubated and the dye exhausted, the incubation chamber will automatically
+    drain any fluid that is left so that the silk may dry.  The drain solenoids are located in the
+    bottom chamber, which needs to be airtight so that it may pressurize and agitate the fluid in the upper
+    chamber.
+</p>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image3.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image53.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image54.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image59.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image62.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image63.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image64.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image66.jpg", width = 100 }
+    });
+}
+<h2>
+    Fluid Pressure System Revisions
+</h2>
+<p>
+    Once the system was pressuized, we discoverd that the original fluid management systems were very leaky and
+    hard to maintain.  The blowoff valve that we had planned to use was also leaky, and highly inaccurate.
+    The dye chambers were non-uniform in size and were very awkward to service.  We decided to replace the
+    chambers with air-brush hoppers.  They were easy to fill and held a much larger volume in a much smaller footprint
+    than the previous chambers.
+</p>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image68.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image70.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image71.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image72.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image73.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image74.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image75.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image69.jpg", width = 100 }
+    });
+}
+<h2>
+    Injector Flow Testing
+</h2>
+<p>
+    The injector flow had to be verified at our chosen pressure, so we measured the output of each injector
+    to determine the volume of fluid we would inject every second.
+</p>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image4.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image86.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image85.jpg", width = 100 }
+    });
+}
+<h2>
+    Controls
+</h2>
+<p>
+    We chose a raspberry pi as our controller becuase of its ability to handle GPIO as well as serve the
+    interface.  It saved us a significant amount of time and trouble in setting up and programming a secondary controller.
+    We used a bank of 16 relays to handle the output, with a single input for the four temperature sensors.  We are able
+    to run the peripherals on a 12V industrial supply while a DC/DC converter powers the PI and relay coils.
+</p>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image11.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image84.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image26.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image60.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image22.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image23.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image61.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image75.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image80.jpg", width = 100 }
+    });
+}
+<h2>
+    Insulation
+</h2>
+<p>
+    Our tests indicated that the incubation chambers were not reaching the optimal curing temperature.
+    We molded a set of lids for the containers and carved a second set from insulative foam.  Each chamber
+    was then wrapped with reflective bubble wrap.
+</p>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image76.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image77.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image78.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image79.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image81.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image82.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image83.jpg", width = 100 }
+    });
+}
+<h2>
+    Results
+</h2>
+<p>
+    The first batches were rough, but we steaily improved and acquired technique.  The numbered pieces are
+    the original batches.
+</p>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image87.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image88.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image89.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image122.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image123.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image124.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image125.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image126.jpg", width = 100 }
+    });
+}
+<h2>
+    Tech Expo Presentation
+</h2>
+<p>
+    We presented the project at a University of Cincinnati tech expo and received an honorable mention.
+    The completed machine is shown running demo cycles, with a large quantity of automated silk batches on display.
+</p>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image90.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image91.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image92.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image93.jpg", width = 100 }
+    });
+}
+<h2>
+    Interface
+</h2>
+<p>
+    We developed an application interface to control the machine, as well as a poster for presentation at the expo.
+    The poster was created in photoshop, while the interface was a simple frontend webpage.
+</p>
+<a href="/files/metrochrome%20poster.zip" class="BigBlueButton">
+    Download Design File
+</a>
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Dye Synthesizer/image127.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Dye Synthesizer/image128.jpg", width = 100 }
+    });
+}
+<h2>
+    Program Logic
+</h2>
+<p>
+    Three standard layers of code are present on our controller;  one for interface, one for business logic, and one to pass messages
+    between the other two.  The interface is a simple web page that could be accessed remotely by another computer or phone.  It is
+    responsible for making AJAX calls to a python webservice hosted on the pi.  The webservice, in turn, opens a socket to
+    a daemon thread that runs continously in the background.  The service can issue commands asynchronously to the daemon,
+    which is threaded to enable concurrent control for each of the chambers.  The daemon manages all of the GPIO and sensors,
+    and will continuously monitor the incubation process even if no client is connected.  The communication and logic layers are available
+    for download.  Both layers use the Pyro framework to maintain the socket server that passes data.
+</p>
+<a href="/files/metrochrome%20code.zip" class="BigBlueButton">
+    Download Code
+</a>
+<h2>
+    Reflections:
+</h2>
+There are three areas in which I feel that the system fell short and could be improved:
+<h3>
+    Use of Pneumatics
+</h3>
+<p>
+    The use of a common-line pressure system is both clever and very inexpensive.  It allows us to use a single inexpensive pump to
+    run injection for a large number of dyes and agitation for a large number of chambers.  The use of a single compessor allows the system
+    to be expanded very cheaply and its formulation presented a great advantage early on in the process, when the full scope of possibilities
+    was less well defined.  While all of these advantages are still present, there are a number of drawbacks that cause me to reconsider this part of the design.
+    It is very difficult to find cheap hardware that is capable of adequately sealing a pressurized air system.  While we are able to
+    produce a sealed system, it is high maintenance and has a dubious level of reliability.  We had many occasions, even late in the development cycle,
+    where the system would develop prominent leaks.  Having a fuel pump and regulator for every liquid line would have been more costly to
+    scale, but would have provided the reliability we needed, in addition to noise reduction.  It would also have necessitated an alternate
+    solution for the agitator.
+</p>
+<h3>
+    Pneumatic Agitation
+</h3>
+<p>
+    Pressurized air is an effective medium with which to agitate and diffuse liquid in a container.  There are also some issues with such a technique
+    that are make it unsuitable for our application.  Our initial understanding was that the primary purpose of agitation was to keep the dye concentration
+    evenly distributed and allow the fabric to absorb dye evenly.  What we failed to understand was that silk (particularly our high-threadcount duponi)
+    is highly impermeable to fluids when wet, and acts as a membrane that captures air and stifles diffusion.  The level of heat present in our incubation
+    chambers causes vaporization of water that can result in the formation of air pockets which block the absorption of dye.  Our agitation system, which
+    relies on the injection of pressurized air through the fluid, only exacerbates this problem.  It causes uneven absorption on the two sides of the weave,
+    and can lead to splotchy colors.  In theory, using a fluid-pump would solve this problem, but our very small dye baths (~100mL) prevent this from being a
+    practical solution as the pumps would likely not have enough fluid and may overheat.  The next best solution might be to use a tilt-mixer that would slope
+    the container to allow air pockets to escape.
+</p>
+<h3>
+    Addition of pH levelling system
+</h3>
+<p>
+    The system calculates and measures the amount of additives necessary to achieve the correct acidity given our fabric weight, but it fails to take into account
+    how the pH may be affected thoughout the cycle, as the dye is absorbed.  The age of the dye and purity of the water can also affect acidity.  To achieve
+    optimal results and reduce the number of chemical pH levellers, it would be wise to add a monitoring system that could dispense additives as necessary to
+    keep a stable acidity throughout the cycle.
+</p>
+

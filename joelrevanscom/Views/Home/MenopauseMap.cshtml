@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Menopause Map";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section Head{
+    <script defer src="/scripts/imagecarousel.js"></script>
+}
+
+@section Foot{
+    <link href="/styles/imagecarousel.css" rel="stylesheet" type="text/css" />
+}
+
+<h1>Menopause Map <time datetime="2017-01">(2017)</time></h1>
+<p>
+    The menopause map was commissioned by Proctor &amp; Gamble for one of their prospective brands, <a href="https://pepperandwits.com">Pepper &amp; Wits</a>.  
+    Designed to educate and raise awareness, the map is also used to gain insight into underserved demographics and conduct market research for the company's innovative new products.
+    The app is fully responsive; built exclusively with vanilla HTML, Javascript, and CSS.
+</p>
+
+<a href="https://pepperandwits.com/pages/menopause-map" class="BigBlueButton" target="_blank">
+    View Map
+</a>
+
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Menopause Map/image1.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Menopause Map/image2.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Menopause Map/image3.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Menopause Map/image4.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Menopause Map/image5.jpg", width = 100 }
+    });
+}

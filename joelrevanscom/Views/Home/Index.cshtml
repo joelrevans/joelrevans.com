@@ -1,0 +1,79 @@
+﻿@using joelrevanscom
+
+@{
+    ViewBag.Title = "Joel R. Evans — Software Engineer Consultant";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section Head{
+    <meta name="description" content="Leading software engineer contractor located in Cincinnati, OH.  Senior software developer
+            with experience in front and back-end web design, SQL, C# .NET and ASP.NET.  View engineering portfolio."/>
+
+    <style>
+        @*Embed this file directly.  It is only used on this page and doesn't need to exist elsewhere in cache.*@
+        @EmbedHelper.EmbedTextFile("/styles/index.css")
+    </style>
+}
+
+<ul id="flexmain">
+    <li>
+        <a href="/Resume">
+            <span>View Resume</span>
+        </a>
+    </li>
+    <li id="MenopauseMapFlex" class="HasImageBackground">
+        <a href="/MenopauseMap">
+            <span>Menopause Map</span>
+        </a>
+    </li>
+    <li id="DyeSynthesizerFlex" class="HasImageBackground">
+        <a href="/DyeSynthesizer">
+            <span>Dye Synthesizer</span>
+        </a>
+    </li>
+    <li id="MicroOscilloscopeFlex" class="HasImageBackground">
+        <a href="/MicroOscilloscope">
+            <span>Micro Oscilloscope</span>
+        </a>
+    </li>
+    <li>
+        <a href="/CraigslistCrawler">
+            <span>Craigslist Crawler</span>
+        </a>
+    </li>
+    <li>
+        <a href="/DNSUPdater">
+            <span>DNS Updater</span>
+        </a>
+    </li>
+    <li id="WidebandVoltmeterFlex" class="HasImageBackground">
+        <a href="/WidebandVoltmeter">
+            <span>Wideband Voltmeter</span>
+        </a>
+    </li>
+    <li id="LineInVoltmeter" class="HasImageBackground"> 
+        <a href="/LineInputVoltmeter">
+            <span>Line Input Voltmeter</span>
+        </a>
+    </li>
+    <li id="AudioRelaySwitchFlex" class="HasImageBackground">
+        <a href="/AudioRelaySwitch">
+            <span>Audio Relay Switch</span>
+        </a>
+    </li>
+    <li>
+        <a href="/DataCompressor">
+            <span>Data Compressor</span>
+        </a>
+    </li>
+    <li id="ZombieCopFlex" class="HasImageBackground">
+        <a href="/ZombieCop">
+            <span>Zombie Cop</span>
+        </a>
+    </li>
+    <li>
+        <a href="/joelrevanscom2015">
+            <span>Joelrevans.com (2015)</span>
+        </a>
+    </li>
+</ul>

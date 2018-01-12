@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Voltmeter";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section Head{
+    <script defer src="/scripts/imagecarousel.js"></script>
+}
+
+@section Foot{
+    <link href="/styles/imagecarousel.css" rel="stylesheet" type="text/css" />
+}
+
+<h1>Wideband Voltmeter <time datetime="2011-04">(2011)</time></h1>
+<p>
+    The Auto-Ranging Voltage Meter was a project that I chose to design as part of a self-directed examination for a microsystems course. It was one of
+    my favorite and most functional projects, so I have published the documentation of its construction. The basic premise is that a cheap microcontroller
+    equipped with a low voltage ADC can be equipped to measure voltages well beyond its normal range, and can automatically tailor its resolution
+    to fit the input waveform.
+</p>
+<h2>
+    How it Works:
+</h2>
+<p>
+    The design relies on a series of voltage dividers, each consecutive one tuned to reduce the input voltage by a factor of two. Each divider allows twice
+    the input voltage of the previous, without overextending the capabilities of the ADC. A zener diode is placed in parallel with each divider to insure
+    that the controller is not exposed to voltages above its tolerance. When one divider reaches this maximum voltage, the controller may select the analog
+    channel corresponding to the next divider. This allows the system to cascade upward while maintaining full voltage resolution.
+    <br /><br />
+    The controller used in this project is the PIC 16F887, an 8-bit microcontroller with a 10-bit ADC and a bank of up to eight analog channels. Because of
+    the mismatch between ADC resolution and CPU word size, only the top or bottom 8-bits of any ADC result can normally be used. To overcome this task, and
+    because felt I like pulling out my own hair, I decided to utilize all ten bits afforded by the ADC. The 1024 available values conveniently matches up
+    well with the 1000 available values on the 7-segment bank selected for the project. However, because the microcontroller architecture only supports
+    8-bit processing, a special library had to be crafted to handle 16-bit operations. The selected hardware lacks the ability to perform multiplication
+    or division natively, and the compiler does not supply routines to emulate said functionality. Creating a full 16-bit arithmetic library on an 8-bit
+    architecture that only supports addition and subtraction was certainly the most challenging part of the project, but once completed was extremely helpful
+    in crafting the binary-to-BCD converter necessary to run the display bank. The logic and hardware for measuring the voltage was the simplest part of the
+    project, and presented few holdups. The photos provided present the design diagram for the hardware and a demonstration of the microcontroller running at
+    ~7 Volts, more than two volts above its maximum allowed input. The meter shown here was able to measure inputs of up to 20V without exceeding the range
+    of the device.
+</p>
+<a href="/files/autorangingvoltagemeter.zip" class="BigBlueButton">
+    Download Project Archive
+</a>
+<br /><br />
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Auto Ranging Voltage Meter/image1.png", width = 100 },
+        new CarouselImage(){ src="/images/Auto Ranging Voltage Meter/image2.png", width = 100 },
+        new CarouselImage(){ src="/images/Auto Ranging Voltage Meter/image3.png", width = 100 }
+    });
+}

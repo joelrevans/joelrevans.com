@@ -1,0 +1,168 @@
+﻿@{
+    ViewBag.Title = "Resume";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section Head{
+    <link href="~/styles/resume.css" rel="stylesheet" type="text/css"/>
+}
+
+<div id="ResumeLinks">
+    <a href="/files/resume.docx" target="_blank"><img alt="DOCX" src="/images/doc-icon.png" " /></a>
+    <a href="/files/resume.pdf" target="_blank"><img alt="PDF" src="/images/pdf-icon.png" /></a>
+    <a href="http://www.linkedin.com/pub/joel-evans/56/542/883" target="_blank"><img alt="LinkedIn" src="/images/linkedin-icon.png" /></a>
+</div>
+
+<div id="ResumeContainer">
+    <address class="vcard centered">
+        <!-- Using hCard format to index address -->
+        <div class="url fn" href="http://joelrevans.com">JOEL R. EVANS</div>
+        <div class="adr">
+            <span class="locality">Cincinnati</span>, <span class="region" title="Ohio">OH</span>
+            <span class="postal-code">45202</span>
+        </div>
+        <div class="tel">
+            513-254-6703
+        </div>
+        <div class="email">
+            mail@joelrevans.com
+        </div>
+    </address>
+    <section>
+        <h1>PROFESSIONAL SKILLS</h1>
+        <div id="Skills">
+            <div>
+                <h2 class="IndentedContent">Application: </h2>
+                <ul>
+                    <li>C# .NET</li>
+                    <li>Silverlight 5</li>
+                    <li>WCF</li>
+                    <li>WPF</li>
+                    <li>Excel (VBA)</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="IndentedContent">Database: </h2>
+                <ul>
+                    <li>T-SQL</li>
+                    <li>X-Path</li>
+                    <li>XSLT</li>
+                    <li>LINQ & Entity</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="IndentedContent">Web/Mobile: </h2>
+                <ul>
+                    <li>ASP.NET</li>
+                    <li>HTML4/5</li>
+                    <li>CSS2/3</li>
+                    <li>Actionscript 1/2/3</li>
+                    <li>Unity3D</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="IndentedContent">Embedded: </h2>
+                <ul>
+                    <li>C</li>
+                    <li>Bash</li>
+                    <li>PIC Assembly</li>
+                    <li>Advanced Electrical Networks and Robotics</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>PROFESSIONAL EXPERIENCE</h1>
+        <section class="IndentedContent">
+            <h2>
+                Contract Software Engineer; Speedway, LLC
+                <span class="TimeRange"><time datetime="2015-10">Oct 2015</time>-<time datetime="2016-06">June 2016</time></span>
+            </h2>
+            <p>
+                Designed the application that predicts sales of fuel products for all Marathon (MPC) corporate stores (T-SQL, ASP.NET MVC, Kendo UI).
+                Built custom tools for data analysis and created core algorithm and user interfaces to be used by business analysts.
+            </p>
+        </section>
+        <section class="IndentedContent">
+            <h2>
+                Software Engineer Consultant; Extraordinaire LLC
+                <span class="TimeRange"><time datetime="2014-06">June 2014</time>-<time datetime="2015-04">April 2015</time></span>
+            </h2>
+            <p>
+                Responsible for production of CQM reports (T-SQL) and renovation of Bradoc EHR software which then received ONC certification.
+                Produced client and interface to support secure messaging, DOPU, and CDA transport between medical providers and their patients.
+                Worked primarily in VB.NET, C#, TSQL, creating user interfaces, windows services, and database reports.
+            </p>
+        </section>
+        <section class="IndentedContent">
+            <h2>
+                Web Developer Consultant; Possible
+                <span class="TimeRange"><time datetime="2013-04">April 2013</time>-<time datetime="2014-02">Feb 2014</time></span>
+            </h2>
+            <p>
+                Responsible for maintenance, promotions, and enhancements on over twenty Smucker's brand sites.
+                Big names include Folgers, Pillsbury, Crisco, Jif, and Dunkin Donuts.  Produced code for all
+                application layers (ASP.NET webforms + MVC 3/4, AJAX), database (T-SQL), in addition to a number of
+                Facebook promotions and responsive mobile layouts (HTML5, CSS, Javascript/jQuery).
+            </p>
+        </section>
+        <section class="IndentedContent">
+            <h2>
+                Application, Web, & Database Consultant; Curiosity 360
+                <span class="TimeRange"><time datetime="2012-10">Sept 2012</time>-<time datetime="2013-03">March 2013</time></span>
+            </h2>
+            <p>
+                Introduced as lead developer, responsible for creation of multi-user concurrent web
+                application for large corporate client.  Designed and implemented entire application architecture
+                from start to finish.  Developed database (TSQL), User Interface (Silverlight, XAML), and
+                communication (ASP.NET, WCF) layers, in addition to establishing secure integration with
+                existing Active Directory system.
+            </p>
+        </section>
+        <section class="IndentedContent">
+            <h2>
+                Database & Application Developer Co-op; E-Technologies Group
+                <span class="TimeRange"><time datetime="2011-06">Jun 2011</time>-<time datetime="2012-06">Jun 2012</time></span>
+            </h2>
+            <p>
+                Developed production T-SQL database systems for P&amp;G Dannon plants.  Responsible for significant expansion and redesign of existing database structures.  Created custom reporting software in C# and SQL procedures to generate dynamic content & visuals from real-time production data.  Worked closely with customers to develop dynamic consumer comment tracking and reporting application in Excel  (VBA), enabling management to effectively categorize and identify manufacturing faults and aggregate consumer comments.  Augmented existing Unity Formula & BOM management software (C#, XSLT, T-SQL, .NET, XAML, X-PATH) to include new functionalities, enabling dynamic entry of parameters for plant processing lines and providing a complete database and UI solution.  Developed XSLT stylesheets to assist remote synchronization with corporate CSS webservers.
+            </p>
+        </section>
+        <section class="IndentedContent">
+            <h2>
+                Experience Media Developer Co-op; Possible
+                <span class="TimeRange"><time datetime="2010-10">Dec 2010</time>-<time datetime="2011-03">Mar 2011</time></span>
+            </h2>
+            <p>
+                Performed research and development on signal filters.  Constructed audio signal switching station to process tones from a 3.5mm plug to relay switches.  Developed 44-KHz scope attachment to read DC voltages using a personal computer via line input.  Developed web-compatible drivers in Adobe flash, enabling sensory input to web content.  Constructed high-efficiency AM radio transmitter.  Designed and assembled HMI for pneumatic cannon.
+            </p>
+        </section>
+        <section class="IndentedContent">
+            <h2>
+                Experience Media Developer Intern; Bridge Worldwide
+                <span class="TimeRange"><time datetime="2010-06">Jun 2010</time>-<time datetime="2010-09">Sept 2010</time></span>
+            </h2>
+            <p>
+                Conducted internal research and development for the Unity3D platform.  Assessed the capabilities of the platform as a potential medium for clients, specifically targeting iOS devices. Produced and documented a number of 3D games and technical demonstrations, utilizing accelerometers, hardware inputs, and touch controls.  Phone demonstrations showcased advanced physics and particle simulations in 3D space.
+            </p>
+        </section>
+        <section class="IndentedContent">
+            <h2>
+                Flash Game Designer and Programmer
+                <span class="TimeRange"><time datetime="2007-06">Jun 2007</time>-<time datetime="2011-06">Jun 2011</time></span>
+            </h2>
+            <p>
+                Produced four works independently.  Responsible for marketing and orchestrating over a half-dozen independent license agreements, as well as distribution of content.  Garnered a collective audience of over 8 million players.  Developed libraries for advanced vector processing, collision detection, pathfinding, and blitting.  Produced all content, from graphics design to sound production.
+            </p>
+        </section>
+    </section>
+    <section>
+        <h1>EDUCATION</h1>
+        <p class="IndentedContent">
+            Bachelor of Science in Electrical Engineering (2014)
+            <br />University of Cincinnati, College of Engineering; Cincinnati, OH
+        </p>
+    </section>
+</div>

@@ -1,0 +1,26 @@
+﻿html {
+    font-family: Calibri, Helvetica, sans-serif;
+}
+
+body {
+    min-width:355px;    /*Min should be 375.  You gotta figure the padding into that though.*/
+    max-width:945px;
+    margin:auto;
+    padding: 15px 10px 20px 10px;
+}
+
+.BigBlueButton {
+    display:inline-block;
+    background-color:#ABC;
+    color:white;
+    padding:7px 10px;
+    font-size:18px;
+    margin:0 20px 10px 0;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+nav{
+    text-align:center;
+}

@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "AudioRelaySwitch";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section Head{
+    <script defer src="/scripts/imagecarousel.js"></script>
+}
+
+@section Foot{
+    <link href="/styles/imagecarousel.css" rel="stylesheet" type="text/css" />
+}
+
+<h1>Audio Relay Switch <time datetime="2010-06">(2010)</time></h1>
+<h2>Design:</h2>
+<p>
+    This circuit is designed to receive a line output from a computer and, if the frequency falls within the appropriate range, power one of four relays.
+    The line inputs are each run through an RC bandpass filter into peak detector, which is then connected to the positive terminal of an op-amp comparator.
+    If the peak detector exceeds a certain voltage (adjustable), the comparator will activate the relay. Up to four signals may be operated simultaneously,
+    activatig all of the relays independently.
+</p>
+<h2>
+    Results:
+</h2>
+<p>
+    The circuit was ultimately successful. The relays behaved as intended, switching very cleanly and quickly when the target frequency was received.
+    Initially there was some difficulty as one of the relays broke after soldering. Half of the board needed to be unsoldered and resoldered in order to
+    find it. This resulted in a very messy soldering job, but a functional design. The device sometimes had difficulty switching all four relays at once,
+    and the relays may trigger each other if the reference voltage is improperly calibrated.
+</p>
+<h2>
+    Reflections:
+</h2>
+<p>
+    The device performed remarkably well. If I were to rebuild, I would have used a bigger circuit board so as not to layer PCBs. The layering
+    process created unnecessary complications for space and worsened the build quality. The target frequencies should have been spaced more evenly to
+    provide a greater overall voltage tolerance.
+</p>
+
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+{
+    new CarouselImage(){ src="/images/Switching%20Station/image1.png", width = 100 },
+    new CarouselImage(){ src="/images/Switching%20Station/image2.png", width = 100 },
+    new CarouselImage(){ src="/images/Switching%20Station/image3.jpg", width = 100 },
+    new CarouselImage(){ src="/images/Switching%20Station/image4.jpg", width = 100 },
+    new CarouselImage(){ src="/images/Switching%20Station/image5.jpg", width = 100 },
+    new CarouselImage(){ src="/images/Switching%20Station/image6.jpg", width = 100 }
+});
+}
+
