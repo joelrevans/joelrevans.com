@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "EAPNET";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section Head{
+    <script defer src="/scripts/imagecarousel.js"></script>
+}
+
+@section Foot{
+    <link href="/styles/imagecarousel.css" rel="stylesheet" type="text/css" />
+}
+
+<h1>EAPnet <time datetime="2018-01">(2018)</time></h1>
+
+<p>
+    EAPnet.com is a high-end, fully custom site comissioned to improve search presence and expand eCommerce reach while
+    automating most invoicing, shipping, and customer management functions.  The site is fully responsive and highly optimized for mobile,
+    with most pages loading less than 1MB of content. All site content is fully user editable with a custom WYSIWYG content management system.
+    The user permission system allows individual users to be assigned to particular pages and types of content. Individual
+    users may also receive personalized email notifications regarding site status, new orders, and order shipment updates.  
+    All site customers receive automated invoice and shipment notifications regarding the status of their order.  The site
+    features an integration with Microsoft Dynamics GP that automatically updates accounting records.  An integration
+    with Price Industries' Rep Edge customer management software allows tracking new customer accounts, activity, orders, as well as 
+    a robust suite of daily reports. An integration with Heartland Payment systems handles automatic invoicing.  There is also a custom
+    portal for fulfillment companies to receive notifications and enter shipment information without exposing the private systems.
+</p>
+
+<a href="https://eapnet.com" class="BigBlueButton" target="_blank">
+    Visit Site Map
+</a>
+
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/EAPnet/image1.jpg", width = 100 },
+        new CarouselImage(){ src="/images/EAPnet/image2.jpg", width = 100 },
+        new CarouselImage(){ src="/images/EAPnet/image8.jpg", width = 100 },
+        new CarouselImage(){ src="/images/EAPnet/image3.jpg", width = 100 },
+        new CarouselImage(){ src="/images/EAPnet/image10.jpg", width = 100 },
+        new CarouselImage(){ src="/images/EAPnet/image4.jpg", width = 100 },
+        new CarouselImage(){ src="/images/EAPnet/image5.jpg", width = 100 },
+        new CarouselImage(){ src="/images/EAPnet/image6.jpg", width = 100 },
+        new CarouselImage(){ src="/images/EAPnet/image7.jpg", width = 100 },
+        new CarouselImage(){ src="/images/EAPnet/image9.jpg", width = 100 },
+    });
+}

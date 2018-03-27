@@ -147,3 +147,7 @@ nav{
 #flexmain li#MenopauseMapFlex::after{
     background-image:url("/images/Index/menopause-map.jpg");
 }
+
+#flexmain li#EAPNETFlex::after {
+    background-image:url("/images/Index/eap.jpg");
+}

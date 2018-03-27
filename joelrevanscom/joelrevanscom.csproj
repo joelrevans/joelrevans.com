@@ -233,6 +233,7 @@
     <Content Include="images\Dye Synthesizer\image97.jpg" />
     <Content Include="images\Dye Synthesizer\image98.jpg" />
     <Content Include="images\Dye Synthesizer\image99.jpg" />
+    <Content Include="images\EAPnet\image1.jpg" />
     <Content Include="images\Index\background.png" />
     <Content Include="images\Index\bganalogvoltagescope.jpg" />
     <Content Include="images\Index\bgdyesynthesizer.jpg" />
@@ -240,6 +241,7 @@
     <Content Include="images\Index\bgswitchingstation.jpg" />
     <Content Include="images\Index\bgwidebandvoltmeter.jpg" />
     <Content Include="images\Index\bgzombiecop.jpg" />
+    <Content Include="images\Index\eap.jpg" />
     <Content Include="images\Index\menopause-map.jpg" />
     <Content Include="images\linkedin-icon.png" />
     <Content Include="images\Menopause Map\image1.jpg" />
@@ -322,6 +324,7 @@
     <Content Include="files\Menopause Map.zip" />
     <None Include="Properties\PublishProfiles\filesys.pubxml" />
     <Content Include="Views\Home\MenopauseMap.cshtml" />
+    <Content Include="Views\Home\EAPNET.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
