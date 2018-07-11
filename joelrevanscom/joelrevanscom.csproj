@@ -96,6 +96,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <Content Include="files\Menopause Map\collapsearrow.png" />
+    <Content Include="files\Menopause Map\greenarrow.png" />
+    <Content Include="files\Menopause Map\map.png" />
+    <Content Include="files\Menopause Map\menomap.css" />
+    <Content Include="files\Menopause Map\menomap.js" />
+    <Content Include="files\Menopause Map\menopause-map.html" />
+    <Content Include="files\Menopause Map\pepperandwits.svg" />
+    <Content Include="files\Menopause Map\questions.js" />
+    <Content Include="files\Metaderm Components\Component Products _ MetaDerm_files\Body_ScalpCream_UPDATED.png" />
+    <Content Include="files\Metaderm Components\Component Products _ MetaDerm_files\Clean_Care_BodyWash12oz.png" />
+    <Content Include="files\Metaderm Components\Component Products _ MetaDerm_files\cream_-_UPDATED.png" />
+    <Content Include="files\Metaderm Components\Component Products _ MetaDerm_files\Shampoo8oz_200px.png" />
+    <Content Include="files\Metaderm Components\Component Products _ MetaDerm_files\theme.scss.css" />
+    <Content Include="files\Metaderm Components\Component Products _ MetaDerm_files\v1-5-logo_400x.png" />
+    <Content Include="files\Metaderm Components\Metaderm Component Products.html" />
     <Content Include="Global.asax" />
     <Content Include="googlea6af1df1ac0c3002.html" />
     <Content Include="images\Analog Voltage Scope\image1.jpg" />
@@ -243,12 +258,15 @@
     <Content Include="images\Index\bgzombiecop.jpg" />
     <Content Include="images\Index\eap.jpg" />
     <Content Include="images\Index\menopause-map.jpg" />
+    <Content Include="images\Index\metaderm.jpg" />
     <Content Include="images\linkedin-icon.png" />
     <Content Include="images\Menopause Map\image1.jpg" />
     <Content Include="images\Menopause Map\image2.jpg" />
     <Content Include="images\Menopause Map\image3.jpg" />
     <Content Include="images\Menopause Map\image4.jpg" />
     <Content Include="images\Menopause Map\image5.jpg" />
+    <Content Include="images\Metaderm\image1.jpg" />
+    <Content Include="images\Metaderm\image2.jpg" />
     <Content Include="images\Metrochrome Interface.jpg" />
     <Content Include="images\Micro Oscilloscope\image0.jpg" />
     <Content Include="images\Micro Oscilloscope\image1.jpg" />
@@ -321,10 +339,20 @@
     <Content Include="Views\Home\ZombieCop.cshtml" />
     <Content Include="Views\Shared\ImageCarousel.cshtml" />
     <Content Include="Views\Home\Resume.cshtml" />
-    <Content Include="files\Menopause Map.zip" />
+    <Content Include="files\Menopause Map\Sofia Pro Bold Italic.otf" />
+    <Content Include="files\Menopause Map\Sofia Pro Bold.otf" />
+    <Content Include="files\Menopause Map\Sofia Pro Italic.otf" />
+    <Content Include="files\Menopause Map\Sofia Pro Light.otf" />
+    <Content Include="files\Menopause Map\Sofia Pro Medium Italic.otf" />
+    <Content Include="files\Menopause Map\Sofia Pro Medium.otf" />
+    <Content Include="files\Menopause Map\Sofia Pro Regular.otf" />
+    <Content Include="files\Menopause Map\Sofia Pro Semi Bold Italic.otf" />
+    <Content Include="files\Menopause Map\Sofia Pro Semi Bold.otf" />
+    <Content Include="files\Menopause Map\TradeGothic.otf" />
     <None Include="Properties\PublishProfiles\filesys.pubxml" />
     <Content Include="Views\Home\MenopauseMap.cshtml" />
     <Content Include="Views\Home\EAPNET.cshtml" />
+    <Content Include="Views\Home\Metaderm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

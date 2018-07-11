@@ -149,5 +149,9 @@ nav{
 }
 
 #flexmain li#EAPNETFlex::after {
-    background-image:url("/images/Index/eap.jpg");
+    background-image: url("/images/Index/eap.jpg");
+}
+
+#flexmain li#MetadermFlex::after {
+    background-image: url("/images/Index/metaderm.jpg");
 }

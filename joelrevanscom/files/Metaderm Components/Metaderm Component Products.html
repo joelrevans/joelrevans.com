@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://www.metaderm.com/pages/component-products -->
+<html class="js flexbox no-touch cssanimations csstransitions svg csscalc shopify-features__smart-payment-buttons--enabled">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="p:domain_verify" content="15e2cdb6f94b4796950a7fe997c533a1">
+  <title>Component Products | MetaDerm</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+  .shopify-payment-button__button--hidden {
+    visibility: hidden;
+  }
+
+  .shopify-payment-button__button {
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 0 transparent;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    width: 100%;
+    transition: background 0.2s ease-in-out;
+  }
+
+  .shopify-payment-button__button[disabled] {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  .shopify-payment-button__button--unbranded {
+    background-color: #1990c6;
+    padding: 1em 2em;
+  }
+
+  .shopify-payment-button__button--unbranded:hover:not([disabled]) {
+    background-color: #136f99;
+  }
+
+  .shopify-payment-button__more-options {
+    background: transparent;
+    border: 0 none;
+    cursor: pointer;
+    display: block;
+    font-size: 1em;
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+  }
+
+  .shopify-payment-button__more-options:hover:not([disabled]) {
+    text-decoration: underline;
+  }
+
+  .shopify-payment-button__more-options[disabled] {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  .shopify-payment-button__button--branded {
+    display: flex;
+    flex-direction: column;
+    min-height: 44px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .shopify-payment-button__button--branded .shopify-cleanslate {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  </style>
+
+<link href="./Component Products _ MetaDerm_files/theme.scss.css" rel="stylesheet" type="text/css" media="all">
+
+<body class="template-page has-sticky-header" style="">
+  <div id="shopify-section-header" class="shopify-section"><style>
+    #MobileHeaderExpandedInput{
+      display:none;
+    }
+
+    #HeaderModule{
+      position:fixed;
+      z-index:10;
+      top:0;
+      left:0;
+      right:0;
+      min-width:320px;
+
+      height:80px;
+      padding:0 calc(2vw + 20px);
+
+      background:rgba(255, 255, 255, .9);
+      border-bottom: 1px solid #e3e3e3;
+    }
+
+    #HeaderModule header{
+      max-width:1260px;
+      height:inherit;
+      display:flex;
+      flex-wrap: nowrap;
+      margin:auto;
+      justify-content: center;
+    }
+
+    #HeaderModule #NavLinks{
+      text-align:right;
+      margin:0;
+      white-space: nowrap;
+      line-height:80px;
+    }
+
+    #HeaderModule #NavLinks li{
+      display:inline-block;
+      margin:0;
+      font-size:.8em;
+      margin:0 14px;
+      vertical-align: middle;
+    }
+
+    #HeaderModule #NavLinks li a{
+      font-weight:normal;
+      text-transform:uppercase;
+      font-weight:bold;
+    }
+
+    #HeaderModule #NavLinks li a:hover{
+      /*color:#0381a2;*/
+    }
+
+    #HeaderModule #HeadLogoContainer{
+      height:80px;
+      margin-right:auto;
+      display: flex;
+      align-items: center;
+    }
+
+    #HeaderModule #HeadLogo{
+      display:inline-block;
+    }
+
+    #HeaderModule #HeadLogoContainer div{
+      /*height:32px;*/
+    }
+
+    #HeaderModule #HeadLogoContainer .header-logo-full{
+      vertical-align: top;
+      max-height:60px;
+      max-height:60px;
+    }
+    #HeaderModule #HeadLogoContainer .header-logo-mini{
+      display: none;
+    }
+
+    #HeaderModule #HeadLogoContainer span{
+      display:inline-block;
+      vertical-align: bottom;
+      font-family: "Montserrat";
+      font-size:1em;
+      margin-left:10px;
+      margin-bottom:-3px;
+    }
+
+    #HeaderModule #NavLinks #LoginIcon{
+      font-family:"launch-icons", sans-serif;
+      font-size:1.4em;
+    }
+
+    #HeaderModule #BuyNowButtonContainer{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size:11px;
+      /*margin-top:18px;*/
+    }
+
+    #HeaderModule #BuyNowButton{
+      padding:3px 30px;
+      font-size:12px;
+    }
+
+    #HeaderModule #MobileHeaderExpandButton, #HeaderModule #MobileHeaderCollapseButton{
+      display:none;
+      font-family:"launch-icons", sans-serif;
+      font-size:1.4em;
+      cursor:pointer;
+      user-select:none;
+      max-height:50px;
+      line-height:80px;
+    }
+
+    #HeaderModule input[name='MobileHeaderState']{
+      display:none;
+    }
+
+    #MobileHeaderExpandedInput:checked + #HeaderModule #MobileHeaderExpandButton{
+      display:none;
+    }
+
+    #HeaderModule .mobile{
+      display:none;
+    }
+    
+    @media(max-width:1200px){
+      #MobileHeaderExpandedInput:checked + #HeaderModule{
+        height:100%;
+      }
+
+      #MobileHeaderExpandedInput:checked + #HeaderModule #BuyNowButtonContainer{
+        justify-content: flex-start;
+        margin-top:26px;
+      }
+
+      #HeaderModule header{
+        flex-wrap:wrap;
+        justify-content: space-between;
+      }
+
+      #HeaderModule #HeadLogoContainer{
+        margin-right:0;
+      }
+
+      #HeaderModule #HeadLogoContainer div{
+        /*height:calc(32px + 1em);*/
+      }
+
+      #HeaderModule #HeadLogoContainer span{
+        display:block;
+        font-size:.79em;
+        margin:0;
+      }
+
+      #HeaderModule #NavLinks{
+        display:none;
+        order:4;
+        text-align:center;
+        font-size:1.8em;
+        flex-basis:100%;
+      }
+
+      #MobileHeaderExpandedInput:checked + #HeaderModule #NavLinks{
+        display:block;
+      }
+
+      #HeaderModule #NavLinks li{
+        display:block;
+      }
+
+      #HeaderModule #NavLinks li a{
+        /*color:#0069C8;*/
+      }
+
+      #HeaderModule #BuyNowButton{
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      #HeaderModule #NavLinks #LoginIcon{
+        font-size:.8em;
+      }
+
+      #HeaderModule #MobileHeaderExpandButton{
+        display:inline-flex;
+      }
+
+      #MobileHeaderExpandedInput:checked + #HeaderModule #MobileHeaderCollapseButton{
+        display:inline-flex;
+      }
+
+      #MobileHeaderExpandedInput:checked + #HeaderModule .desktop{
+        display:none;
+      }
+
+      #MobileHeaderExpandedInput:checked + #HeaderModule .mobile{
+        display:initial;
+      }
+      #HeaderModule #HeadLogoContainer .header-logo-full {
+        /*max-height: 30px;*/
+        display: none;
+      }
+      #HeaderModule #HeadLogoContainer .header-logo-mini {
+        max-height: 60px;
+        display: inline-block;
+      }
+
+    }
+</style>
+
+<input id="MobileHeaderExpandedInput" name="MobileHeaderState" type="radio">
+<script>
+  var nav = document.getElementById("HeaderModule");
+  var closeNavButtons = nav.querySelectorAll("[closenav]");
+  var closeNavInput = nav.querySelector("#MobileHeaderCollapseButton input");
+
+  for(var i = 0; i < closeNavButtons.length; ++i){
+    closeNavButtons[i].addEventListener("click", closeNav);
+  }
+
+  function closeNav(){
+    closeNavInput.click();
+  }
+
+  (function(){
+    var buyNowButton = document.getElementById("BuyNowButton");
+    //buyNowButton.addEventListener("click", BuyNowClicked);
+    buyNowButton.addEventListener("mouseover", trackMouseover);
+    buyNowButton.addEventListener("click", trackClick);
+    buyNowButton.addEventListener("mouseout", trackMouseout);
+    function trackMouseover(evt){
+      ga("send",
+      {
+        hitType: "event",
+        eventCategory: "Buy Now Button",
+        eventAction: "mouseover",
+        eventLabel: window.location.href
+      });
+    };
+    function trackClick(evt){
+      ga("send",
+      {
+        hitType: "event",
+        eventCategory: "Buy Now Button",
+        eventAction: "click",
+        eventLabel: window.location.href
+      });
+    };
+    function trackMouseout(evt){
+      ga("send",
+      {
+        hitType: "event",
+        eventCategory: "Buy Now Button",
+        eventAction: "mouseout",
+        eventLabel: window.location.href
+      });
+    };
+  })();
+
+
+</script>
+
+
+
+</div>
+
+  <main class="main-content">
+
+
+
+    <style>
+  input[type="radio"]{
+    display:none;
+  }
+
+  h2{
+    font-size:36px;
+    color:#82bd00;
+    text-align: center;
+  }
+
+  input[name='select-component']:checked ~ h2{
+    display:none;
+  }
+
+  .carousel{
+    transform-style: preserve-3d;
+    perspective:500px;
+    perspective-origin:300px 0;
+    transition:perspective-origin .3s;
+
+    max-width:900px;
+    padding-top:30px;
+    margin:auto;
+
+    white-space: nowrap;
+    overflow:hidden;
+  }
+
+  @media(max-width:900px and min-width:400px){
+    input[name='select-component']:checked ~ .carousel{
+      margin-bottom:-5%;
+    }
+  }
+
+  @media(max-width:900px){
+    .carousel{
+      perspective-origin: 60% 0;
+    }
+  }
+
+  input[name='select-component']:checked ~ .carousel .panel{
+    max-width: 300px;
+    width:33vw;
+  }
+
+  .panel{
+    position:relative;
+
+    vertical-align: top;
+    display:inline-block;
+
+    transition:transform .3s, left .3s;
+
+    width:25vw;
+    max-width:225px;
+    text-align: center;
+  }
+
+  input[name='select-component']:checked ~ .carousel .panel{
+    transform:translateZ(-900px);
+  }
+
+  #heal-cream:checked ~ .carousel .panel:not(.heal-cream),
+  #scalp-spray:checked ~ .carousel .panel:not(.scalp-spray),
+  #body-wash:checked ~ .carousel .panel:not(.body-wash),
+  #shampoo:checked ~ .carousel .panel:not(.shampoo){
+    left:-50px;
+  }
+
+  #scalp-spray:checked ~ .carousel .panel.heal-cream,
+  #body-wash:checked ~ .carousel .panel.heal-cream,
+  #body-wash:checked ~ .carousel .panel.scalp-spray,
+  #shampoo:checked ~ .carousel .panel.heal-cream,
+  #shampoo:checked ~ .carousel .panel.scalp-spray,
+  #shampoo:checked ~ .carousel .panel.body-wash
+  {
+    transform: translate3d(300px, 0, -900px);
+  }
+
+  #body-wash:checked ~ .carousel .panel.body-wash{
+    transform: translateX(-600px);
+  }
+  #heal-cream:checked ~ .carousel .panel.heal-cream{
+    transform:none;
+  }
+  #scalp-spray:checked ~ .carousel .panel.scalp-spray{
+    transform: translateX(-300px);
+  }
+  #shampoo:checked ~ .carousel .panel.shampoo{
+    transform: translateX(-900px);
+  }
+
+  #body-wash:checked ~ .carousel .panel.body-wash,
+  #heal-cream:checked ~ .carousel .panel.heal-cream,
+  #scalp-spray:checked ~ .carousel .panel.scalp-spray,
+  #shampoo:checked ~ .carousel .panel.shampoo{
+    pointer-events: none;
+  }
+
+  @media(max-width:900px){
+    input[name='select-component']:checked ~ .carousel .panel{
+      transform:translateZ(-100vw);
+    }
+
+    #scalp-spray:checked ~ .carousel .panel.heal-cream,
+    #body-wash:checked ~ .carousel .panel.heal-cream,
+    #body-wash:checked ~ .carousel .panel.scalp-spray,
+    #shampoo:checked ~ .carousel .panel.heal-cream,
+    #shampoo:checked ~ .carousel .panel.scalp-spray,
+    #shampoo:checked ~ .carousel .panel.body-wash{
+      transform: translate3d(33vw, 0, -100vw);
+    }
+
+    #body-wash:checked ~ .carousel .panel.body-wash{
+      transform: translateX(-66vw);
+    }
+
+    #scalp-spray:checked ~ .carousel .panel.scalp-spray{
+      transform: translateX(-33vw);
+    }
+
+    #shampoo:checked ~ .carousel .panel.shampoo{
+      transform: translateX(-100vw);
+    }
+  }
+
+  .panel figure{
+    display: inline-block;
+    text-align: center;
+  }
+
+  .panel figure img{
+    max-height:600px;
+  }
+
+  .panel figcaption, .product-content h4{
+    font-weight:bold;
+    font-size:20px;
+
+    transition: opacity .3s, height .3s step-end .3s;
+    white-space: normal;
+  }
+
+  input[name='select-component']:checked ~ .carousel figcaption{
+    opacity:0;
+    height:0;
+    width:0;
+  }
+
+  @media(max-width:900px){
+    .carousel figcaption{
+      opacity:0;
+      height:0;
+      width:0;
+    }
+  }
+
+  .product-form{
+    display:inline-block;
+    height:0;
+    opacity:0;
+    transition:opacity .3s, height .3s step-end;
+
+    margin-top:0;
+
+    pointer-events: all;
+    user-select: none;
+
+    position:absolute;
+    top:49%;
+    left:33%;
+
+    text-align: center;
+  }
+
+  input[name='select-component']:checked ~ .carousel .product-form{
+    opacity:1;
+    height:auto;
+  }
+
+  .product-form-item{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:20px;
+    padding:10px 10px;
+    border-radius:1000px;
+  }
+
+  @media(max-width:600px){
+    .product-form-item{
+      font-size:calc(1.5vw + 11px);
+      padding:1.666vw;
+    }
+  }
+
+  #body-wash:checked ~ .carousel .panel.body-wash .wash-form-item,
+  #heal-cream:checked ~ .carousel .panel.heal-cream .cream-form-item,
+  #scalp-spray:checked ~ .carousel .panel.scalp-spray .spray-form-item,
+  #shampoo:checked ~ .carousel .panel.shampoo .shampoo-form-item,{
+    background-color:rgba(130, 189, 0, .3);
+    font-weight:bold;
+  }
+
+  .product-item-title{
+    display:inline-block;
+    margin:0 10px;
+  }
+
+  @media(max-width:600px){
+    .product-item-title{
+      margin:0 calc(1vw + 4px);
+    }
+  }
+
+  .qty-button{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:32px;
+    height:32px;
+    cursor:pointer;
+    font-size:48px;
+    color:#82bd00;
+    border:2px solid #82bd00;
+    border-radius:1000px;
+    user-select:none;
+    text-align: center;
+  }
+
+  .qty-button:hover{
+    background-color:#82bd00;
+    color:white;
+  }
+
+  @media(max-width:600px){
+    .qty-button{
+      width:calc(1vw + 26px);
+      height:calc(1vw + 26px);
+    }
+  }
+
+  .minus{
+    align-items:flex-start;
+    line-height:20px;
+  }
+
+  .price{
+    color:#82bd00;
+  }
+
+  /*.price:not(.non-zero)::after{
+    content: "/ea";
+    color:#797676;
+  }*/
+
+  .price.non-zero::after{
+    content:none;
+  }
+
+  .checkout-button{
+    color:#82bd00;
+    background-color:white;
+    border: 2px solid #82bd00;
+    transition: background-color .3s, opacity .3s;
+    font-weight:bold;
+    padding:5px 25px;
+    margin-top:10px;
+    opacity:0;
+    pointer-events: none;
+  }
+
+  .checkout-button:hover{
+    background-color:#82bd00;
+  }
+
+  input[type='hidden'][name='qty_wash']:not([value='0']) ~ .checkout-button,
+  input[type='hidden'][name='qty_cream']:not([value='0']) ~ .checkout-button,
+  input[type='hidden'][name='qty_spray']:not([value='0']) ~ .checkout-button,
+  input[type='hidden'][name='qty_shampoo']:not([value='0']) ~ .checkout-button{
+    opacity:1;
+    pointer-events: auto;
+  }
+
+  .default-link{
+    display: none;
+    text-decoration: underline;
+    text-align: center;
+    margin-top:20px;
+    font-size:14px;
+  }
+
+  .product-form .default-link{
+    display:inline-block;
+  }
+
+  @media(max-width:500px){
+    .product-form .default-link{
+      display:none;
+    }
+
+    .default-link{
+      display:block;
+      margin-top:0;
+      margin-bottom:15px;
+    }
+  }
+
+  .product-content{
+    overflow:hidden;
+    opacity:0;
+    height:0;
+
+    max-width:900px;
+    margin:auto;
+
+    transition: opacity .3s linear .3s;
+    pointer-events: all;
+  }
+
+  .product-content p{
+    text-align: left;
+    margin:8px 0;
+    padding:0;
+  }
+
+  .product-content h5{
+    font-weight:bold;
+  }
+
+  .product-content ul{
+    list-style-type:disc;
+    list-style-position:inside;
+    margin:8px 0;
+  }
+
+  .product-content li{
+    margin:4px 0;
+  }
+
+  #body-wash:checked ~  .product-content.body-wash,
+  #heal-cream:checked ~ .product-content.heal-cream,
+  #scalp-spray:checked ~ .product-content.scalp-spray,
+  #shampoo:checked ~ .product-content.shampoo{
+    height:auto;
+    opacity:1;
+    padding:0 10px;
+  }
+
+  .shipping-disclaimer{
+    display:none;
+    max-width: 900px;
+    margin-top:20px;
+  }
+
+  input[name='select-component']:checked ~ .product-content .shipping-disclaimer{
+    display:block;
+  }
+</style>
+
+<input id="body-wash" name="select-component" type="radio">
+<input id="heal-cream" name="select-component" type="radio">
+<input id="scalp-spray" name="select-component" type="radio">
+<input id="shampoo" name="select-component" type="radio">
+
+<h2>Select a Product</h2>
+
+<div class="carousel">
+  <div class="panel heal-cream">
+    <figure>
+      <label for="heal-cream">
+        <img src="./Component Products _ MetaDerm_files/cream_-_UPDATED.png">
+      </label>
+      <figcaption>
+        <label for="heal-cream">
+          Heal &amp; Prevent Cream
+        </label>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="panel scalp-spray">
+    <figure>
+      <label for="scalp-spray">
+        <img src="./Component Products _ MetaDerm_files/Body_ScalpCream_UPDATED.png">
+      </label>
+      <figcaption>
+        <label for="scalp-spray">
+          Healing Body &amp; Scalp Spray
+        </label>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="panel body-wash">
+    <figure>
+      <label for="body-wash">
+        <img src="./Component Products _ MetaDerm_files/Clean_Care_BodyWash12oz.png">
+      </label>
+      <figcaption>
+        <label for="body-wash">
+          Clean &amp; Care Body Wash
+        </label>
+      </figcaption>
+    </figure>
+    <br>
+  </div>
+  <div class="panel shampoo">
+    <figure>
+      <label for="shampoo">
+        <img src="./Component Products _ MetaDerm_files/Shampoo8oz_200px.png">
+      </label>
+      <figcaption>
+        <label for="shampoo">
+          Clean &amp; Care Shampoo
+        </label>
+      </figcaption>
+    </figure>
+    <br>
+  </div>
+  <form class="product-form" method="get">
+    <label for="heal-cream" class="product-form-item cream-form-item">
+      <div class="minus qty-button minus-cream">-</div>
+      <div class="product-item-title"><span class="cream-qty">0</span> Cream <span class="price cream-price"></span></div>
+      <div class="plus qty-button plus-cream">+</div>
+    </label>
+    <label for="scalp-spray" class="product-form-item spray-form-item">
+      <div class="minus qty-button minus-spray">-</div>
+      <div class="product-item-title"><span class="spray-qty">0</span> Spray <span class="price spray-price"></span></div>
+      <div class="plus qty-button plus-spray">+</div>
+    </label>
+    <label for="body-wash" class="product-form-item wash-form-item">
+      <div class="minus qty-button minus-wash">-</div>
+      <div class="product-item-title"><span class="wash-qty">0</span> Wash <span class="price wash-price"></span></div>
+      <div class="plus qty-button plus-wash">+</div>
+    </label>
+    <label for="shampoo" class="product-form-item shampoo-form-item">
+      <div class="minus qty-button minus-shampoo">-</div>
+      <div class="product-item-title"><span class="shampoo-qty">0</span> Shampoo <span class="price shampoo-price"></span></div>
+      <div class="plus qty-button plus-shampoo">+</div>
+    </label>
+    <input type="hidden" name="qty_spray" value="0">
+    <input type="hidden" name="qty_wash" value="0">
+    <input type="hidden" name="qty_cream" value="0">
+    <input type="hidden" name="qty_shampoo" value="0">
+    <button class="checkout-button" onclick="alert('This is the end of the demo.')">Check Out</button>
+    <br>
+    <a class="default-link" href="https://www.metaderm.com/pages/products#kit-section">Upgrade to a System and get free shipping!</a>
+  </form>
+</div>
+
+<a class="default-link" href="https://www.metaderm.com/pages/products#kit-section">Upgrade to a System and get free shipping!</a>
+<section class="product-content heal-cream">
+  <h4>
+    Heal &amp; Prevent Cream — $19.95*/ea
+  </h4>
+  <p>
+    This powerful, moisturizing, anti-inflammatory therapy proven to dramatically restore skin health. MetaDerm Heal &amp; Prevent
+    Cream resolves flares and builds resistance to future flares.
+  </p>
+  <h5>What's in it:</h5>
+  <ul>
+    <li>
+      Proprietary blend of 25 botanicals, clinically proven to calm inflammation below the skin surface
+    </li>
+    <li>
+      Cosmetic-grade moisturizers that improve skin barrier and leave skin feeling nourished
+    </li>
+    <li>
+      Steroid-free, fragrance-free, paraben-free, dye-free
+    </li>
+  </ul>
+  <h5>Best used for:</h5>
+  <ul>
+    <li>
+      Active psoriasis flares on the body
+    </li>
+    <li>
+      Daily resistance therapy to prevent future psoriasis flares
+    </li>
+  </ul>
+  <div class="shipping-disclaimer">*Shipping not included</div>
+</section>
+<section class="product-content scalp-spray">
+  <h4>
+    Healing Body &amp; Scalp Spray — $19.95*/ea
+  </h4>
+  <p>
+    This soothing, no-drip, anti-inflammatory spray proven to
+    dramatically restore skin and health. This easy-to-use spray is
+    perfect for treating scalp psoriasis or layering with cream to
+    treat the body.
+  </p>
+  <h5>What’s in it:</h5>
+  <ul>
+    <li>
+      Proprietary blend of botanicals, clinically proven to calm
+      inflammation below the skin surface
+    </li>
+    <li>
+      Fast-absorbing skin conditioner that hydrates your scalp
+      without build-up on your hair
+    </li>
+    <li>
+      Steroid-free, fragrance-free, paraben-free, dye-free
+    </li>
+  </ul>
+  <h5>
+    Best used for:
+  </h5>
+  <ul>
+    <li>
+      Scalp &amp; Nail psoriasis
+    </li>
+    <li>
+      Hard to reach areas
+    </li>
+    <li>
+      Treatment of body flares while on-the-go
+    </li>
+  </ul>
+  <div class="shipping-disclaimer">*Shipping not included</div>
+</section>
+<section class="product-content body-wash">
+  <h4>
+    Clean &amp; Care Body Wash — $19.95*/ea
+  </h4>
+  <p>
+    Replace your body wash with this ultra-gentle,
+    low-lather cleanser designed without excess
+    irritants. Clean &amp; Care Body Wash cleans your
+    skin without over-drying your skin, and sets a
+    foundation for Heal &amp; Prevent Cream or Spray.
+  </p>
+  <p>
+    Clean &amp; Care Body Wash does not contain our
+    anti-inflammatory active ingredient. Used alone,
+    it will not heal psoriasis flares.
+  </p>
+  <div class="shipping-disclaimer">*Shipping not included</div>
+</section>
+<section class="product-content shampoo">
+  <h4>
+    Clean &amp; Care Shampoo — $12.00*/ea
+  </h4>
+  <p>
+    Cleans, protects, and moisturizes dry scalp Helps restore natural moisture Gentle and pH balanced for daily use Replaces your in-shower shampoo.
+  </p>
+  <div class="shipping-disclaimer">*Shipping not included</div>
+</section>
+
+<script src="./Component Products _ MetaDerm_files/UrlSearchParamsPolyfill.js.download"></script>
+<script>
+(function(){
+  var creamqty = 0;
+  var sprayqty = 0;
+  var washqty = 0;
+  var shampooqty = 0;
+
+  var creamPrice = 19.95;
+  var washPrice = 19.95;
+  var sprayPrice = 19.95;
+  var shampooPrice = 16.00;
+
+  var creamInput = document.querySelector("input[name='qty_cream']");
+  var washInput = document.querySelector("input[name='qty_wash']");
+  var sprayInput = document.querySelector("input[name='qty_spray']");
+  var shampooInput = document.querySelector("input[name='qty_shampoo']");
+
+  var printCream = document.querySelector(".cream-qty");
+  var printSpray = document.querySelector(".spray-qty");
+  var printWash = document.querySelector(".wash-qty");
+  var printShampoo = document.querySelector(".shampoo-qty");
+
+  var plusCream = document.querySelector(".plus-cream");
+  var plusSpray = document.querySelector(".plus-spray");
+  var plusWash = document.querySelector(".plus-wash");
+  var plusShampoo = document.querySelector(".plus-shampoo");
+
+  var minusCream = document.querySelector(".minus-cream");
+  var minusSpray = document.querySelector(".minus-spray");
+  var minusWash = document.querySelector(".minus-wash");
+  var minusShampoo = document.querySelector(".minus-shampoo");
+
+  var printCreamPrice = document.querySelector(".cream-price");
+  var printSprayPrice = document.querySelector(".spray-price");
+  var printWashPrice = document.querySelector(".wash-price");
+  var printShampooPrice = document.querySelector(".shampoo-price");
+
+  var bodyWash = document.querySelector("#body-wash");
+  var healCream = document.querySelector("#heal-cream");
+  var scalpSpray = document.querySelector("#scalp-spray");
+  var shampooSpray = document.querySelector("#shampoo");
+
+  var checkoutButton = document.querySelector(".checkout-button");
+
+  var params = new URLSearchParams(location.search);
+  var selectedId = params.get("selected");
+  if(selectedId != null){
+    var selectedInput = document.getElementById(selectedId);
+    if(selectedInput != null){
+      selectedInput.checked = true;
+    }
+  }
+
+  if(selectedId == "heal-cream"){
+    TrackCream();
+  } else {
+    healCream.addEventListener("change", TrackCream);
+  }
+
+  if(selectedId == "body-wash"){
+    TrackWash();
+  } else {
+      bodyWash.addEventListener("change", TrackWash);
+  }
+
+  if(selectedId == "scalp-spray"){
+    TrackSpray();
+  } else {
+    scalpSpray.addEventListener("change", TrackSpray);
+  }
+
+  if(selectedId == "shampoo"){
+    TrackShampoo();
+  } else {
+    shampoo.addEventListener("change", TrackShampoo);
+  }
+
+  checkoutButton.addEventListener("click", RetainScience);
+
+  plusCream.addEventListener("click", function(){ creamqty++; UpdateCreamPrints(); });
+  plusSpray.addEventListener("click", function(){ sprayqty++; UpdateSprayPrints(); });
+  plusWash.addEventListener("click", function(){ washqty++; UpdateWashPrints(); });
+  plusShampoo.addEventListener("click", function(){ shampooqty++; UpdateShampooPrints(); });
+
+  minusCream.addEventListener("click", function(){ creamqty--; UpdateCreamPrints(); });
+  minusSpray.addEventListener("click", function(){ sprayqty--; UpdateSprayPrints(); });
+  minusWash.addEventListener("click", function(){ washqty--; UpdateWashPrints(); });
+  minusShampoo.addEventListener("click", function(){ shampooqty--; UpdateShampooPrints(); });
+
+  function UpdateCreamPrints(){
+    if(creamqty > 0){
+      printCreamPrice.classList.add("non-zero");
+      printCreamPrice.innerText = "$" + (creamPrice * Math.max(creamqty,1)).toFixed(2) + "*";
+      printCream.innerText = creamqty;
+    }else if(creamqty < 0){
+      creamqty = 0;
+      printCream.innerText = creamqty;
+      printCreamPrice.innerText = "";
+      printCream.innerText = 0;
+    }else{
+      printCreamPrice.classList.remove("non-zero");
+      printCreamPrice.innerText = "";
+      printCream.innerText = 0;
+    }
+    creamInput.value = creamqty;
+  }
+
+  function UpdateSprayPrints(){
+    if(sprayqty > 0){
+      printSprayPrice.classList.add("non-zero");
+      printSprayPrice.innerText = "$" + (sprayPrice * Math.max(sprayqty,1)).toFixed(2) + "*";
+      printSpray.innerText = sprayqty;
+    }else if(sprayqty < 0){
+      sprayqty = 0;
+      printSpray.innerText = sprayqty;
+      printSprayPrice.innerText = "";
+      printSpray.innerText = 0;
+    }else{
+      printSprayPrice.classList.remove("non-zero");
+      printSprayPrice.innerText = "";
+      printSpray.innerText = 0;
+    }
+    sprayInput.value = sprayqty;
+  }
+
+  function UpdateWashPrints(){
+    if(washqty > 0){
+      printWashPrice.classList.add("non-zero");
+      printWashPrice.innerText = "$" + (washPrice * Math.max(washqty,1)).toFixed(2) + "*";
+      printWash.innerText = washqty;
+    }else if(washqty < 0){
+      washqty = 0;
+      printWash.innerText = washqty;
+      printWashPrice.innerText = "";
+      printWash.innerText = 0;
+    }else{
+      printWashPrice.classList.remove("non-zero");
+      printWashPrice.innerText = "";
+      printWash.innerText = 0;
+    }
+    washInput.value = washqty;
+  }
+
+  function UpdateShampooPrints(){
+    if(shampooqty > 0){
+      printShampooPrice.classList.add("non-zero");
+      printShampooPrice.innerText = "$" + (shampooPrice * Math.max(shampooqty,1)).toFixed(2) + "*";
+      printShampoo.innerText = shampooqty;
+    }else if(shampooqty < 0){
+      shampooqty = 0;
+      printShampoo.innerText = shampooqty;
+      printShampooPrice.innerText = "";
+      printShampoo.innerText = 0;
+    }else{
+      printShampooPrice.classList.remove("non-zero");
+      printShampooPrice.innerText = "";
+      printShampoo.innerText = 0;
+    }
+    shampooInput.value = shampooqty;
+  }
+
+  function RetainScience(){
+    if(creamInput.value > 0){
+      _rsq.push(['_addItem', {'id': '450379', 'quantity': creamInput.value}]); // replace item_id with your dynamic item_id variable
+    }
+    if(washInput.value > 0){
+      _rsq.push(['_addItem', {'id': '450385', 'quantity': washInput.value}]); // replace item_id with your dynamic item_id variable
+    }
+    if(sprayInput.value > 0){
+      _rsq.push(['_addItem', {'id': '450386', 'quantity': sprayInput.value}]); // replace item_id with your dynamic item_id variable
+    }
+    if(shampooInput.value > 0){
+      _rsq.push(['_addItem', {'id': '1075026_475786', 'quantity': shampooInput.value}]); // replace item_id with your dynamic item_id variable
+    }
+    _rsq.push(['_setAction', 'shopping_cart']);
+    _rsq.push(['_track']);
+  }
+
+  function TrackCream(){
+    healCream.removeEventListener("change", TrackCream);
+     _rsq.push(['_addItem', {'id': '450379'}]);
+     _rsq.push(['_track']);
+  }
+
+  function TrackWash(){
+    bodyWash.removeEventListener("change", TrackWash);
+    _rsq.push(['_addItem', {'id': '450385'}]);
+    _rsq.push(['_track']);
+  }
+
+  function TrackSpray(){
+    scalpSpray.removeEventListener("change", TrackSpray);
+    _rsq.push(['_addItem', {'id': '450386'}]);
+    _rsq.push(['_track']);
+  }
+
+  function TrackShampoo(){
+    shampooSpray.removeEventListener("change", TrackShampoo);
+    _rsq.push(['_addItem', {'id': '1075026_475786'}]);
+    _rsq.push(['_track']);
+  }
+
+})();
+</script>
+</main>
+</body>
+</html>

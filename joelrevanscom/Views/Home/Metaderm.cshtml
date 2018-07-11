@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Metaderm";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section Head{
+    <script defer src="/scripts/imagecarousel.js"></script>
+}
+
+@section Foot{
+    <link href="/styles/imagecarousel.css" rel="stylesheet" type="text/css" />
+}
+
+<h1>Metaderm Products <time datetime="2018-05">(2018)</time></h1>
+
+<p>
+    This page was commissioned by Proctor &amp; Gamble for their <a href="https://metaderm.com" target="_blank">Metaderm</a> brand.  The page acts as a product selector and cart for individual products on the site.
+    In addition to being fully responsive, the page uses CSS to animate and reposition selected items in a three dimensional layout.
+</p>
+
+<a href="~/files/Metaderm Components/Metaderm Component Products.html" class="BigBlueButton" target="_blank">
+    View Demo
+</a>
+
+@{ Html.RenderPartial("ImageCarousel", new CarouselImage[]
+    {
+        new CarouselImage(){ src="/images/Metaderm/image1.jpg", width = 100 },
+        new CarouselImage(){ src="/images/Metaderm/image2.jpg", width = 100 },
+    });
+}

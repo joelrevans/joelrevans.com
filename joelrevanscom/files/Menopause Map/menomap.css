@@ -1,0 +1,725 @@
+@font-face{
+    font-family: "Sofia Pro";
+    src: url("Sofia Pro Regular.otf");
+    font-weight:400;
+}
+
+@font-face{
+    font-family: "Sofia Pro";
+    src: url("Sofia Pro Italic.otf");
+    font-weight:400;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: "Sofia Pro";
+    src: url("Sofia Pro Light.otf");
+    font-weight:300;
+}
+
+@font-face{
+    font-family: "Sofia Pro";
+    src: url("Sofia Pro Medium.otf");
+    font-weight:500;
+}
+
+@font-face{
+    font-family: "Sofia Pro";
+    src: url("Sofia Pro Medium Italic.otf");
+    font-weight:500;
+    font-style:italic;
+}
+
+@font-face{
+    font-family: "Sofia Pro";
+    src: url("Sofia Pro Semi Bold.otf");
+    font-weight:600;
+}
+
+@font-face{
+    font-family: "Sofia Pro";
+    src: url("Sofia Pro Semi Bold Italic.otf");
+    font-weight:600;
+    font-style:italic;
+}
+
+@font-face{
+    font-family: "Sofia Pro";
+    src: url("Sofia Pro Bold.otf");
+    font-weight:700;
+}
+
+@font-face{
+    font-family: "Sofia Pro";
+    src: url("Sofia Pro Bold Italic.otf");
+    font-weight:700;
+    font-style:italic;
+}
+
+@font-face{
+  font-family: "Trade Gothic";
+  src: url("TradeGothic.otf");
+  font-weight:700;
+}
+
+.italic{
+  font-style:italic;
+}
+
+/*Enables momentum scrolling in IOS*/
+html{
+  -webkit-overflow-scrolling: touch;
+}
+
+pre{
+    font-family:inherit;
+    font-size:inherit;
+}
+
+#header{
+    display:none;
+}
+
+body{
+  overflow:hidden;
+  position:fixed; /*Iphone HACK disables scrolling.*/
+}
+
+body *{
+    box-sizing:border-box;
+    font-family:"Sofia Pro";
+}
+
+#PageContent{
+  padding:0;
+  max-width:100%;
+}
+
+#MapContainer{
+  overflow:hidden;
+  height:100vh;
+  width:100vw;
+  transition:background-color .6s;
+}
+
+#AppHeader{
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+
+    height:75px;
+
+    padding-top:2vh;
+    margin:0 auto;
+
+    width:60vw;
+    transition:top 1s;
+}
+
+#AppHeader img{
+    display:block;
+    margin:auto;
+    max-height:100%;
+    max-width:100%;
+}
+
+#MapBackground{
+    display:inline-block;
+    position:absolute;
+    z-index:1;
+    top:-500vh;
+    left:-500vw;
+    padding:1000vh 1000vw;
+
+    background-image:url("map.png");
+    background-position: center;
+    transform:translateZ(-2px) scale(3);
+
+    opacity:0;
+    transition:opacity 1s ease-out;
+}
+
+#Tiles{
+    position:relative;
+    z-index:2;
+    list-style-type:none;
+    padding:0;
+    /*margin-top:15vh;*/
+    margin-top:90px;
+}
+
+#Tiles > li{
+    display:none;
+    position:absolute;
+    max-width:800px;
+    max-height:1000px;
+    width:90vw;
+    height:calc(90vh - 90px);
+    border-radius:6px;
+    padding:12vh 0 0;
+    z-index:2;
+    transition:background-color 1s;
+}
+
+#Tiles > li:nth-child(3n+1){
+    background-color:rgb(59, 207, 219);
+}
+
+#Tiles > li:nth-child(3n+2){
+    background-color:rgb(238,196,34);
+}
+
+#Tiles > li:nth-child(3n+3){
+    background-color:rgb(239,84,80);
+}
+
+#Tiles > li.finalcard{
+  background-color:white;
+  height:calc(100vh - 90px);
+  padding:0;
+  border-radius:6px 6px 0 0;
+  max-height:none;
+  font-weight:300;
+}
+
+#Tiles .undercard{
+  position:absolute;
+  left:100%;
+  top:70px;
+  width:200px;
+  font-size:18px;
+  color:white;
+  border-top:2px solid white;
+  padding-top:30px;
+  margin-left:15px;
+  line-height:40px;
+  transition:left .5s;
+  z-index:-1;
+  white-space:nowrap;
+}
+
+#Tiles .undercard h2{
+  display:none;
+  color:inherit;
+  text-transform:uppercase;
+}
+
+#Tiles .undercard ul{
+  margin:0;
+  padding-left:35px;
+  list-style-type:disc;
+}
+
+#Tiles .undercard label[for]{
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+#Tiles .FinalCardHeader{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:55px;
+    border-bottom:1px solid black;
+    margin:15px 50px 0;
+    padding-bottom:5px;
+}
+
+#Tiles .collapsed .FinalCardHeader .downarrow{
+    transform:rotate(180deg);
+}
+
+#Tiles .cardlogo{
+    display:inline-block;
+    vertical-align: middle;
+    height:100%;
+}
+
+#Tiles .leftarrow, #Tiles .rightarrow{
+    cursor:pointer;
+}
+
+#Tiles .finalcard .downarrow{
+    display:none;
+    cursor:pointer;
+    align-items:center;
+    height:100%;
+}
+
+#Tiles .finalcard:not([data-yes]) .leftarrow, #Tiles .finalcard:not([data-no]) .rightarrow{
+    display:none;
+}
+
+#Tiles .columns{
+  font-size:0;
+}
+
+#Tiles .leftcolumn, #Tiles .rightcolumn{
+    width:50px;
+    display:inline-flex;
+    justify-content: center;
+    vertical-align: top;
+    margin-top:30px;
+}
+
+#Tiles .leftcolumn .leftarrow{
+    transform:rotate(90deg);
+}
+
+#Tiles .centercolumn{
+    display:inline-block;
+    width:calc(100% - 100px);
+    height:calc(100% - 60px);
+    overflow:auto;
+    padding-top:20px;
+    font-size:initial;
+}
+
+#Tiles .rightarrow{
+    transform:rotate(-90deg);
+}
+
+#Tiles .question{
+    min-height:40%;
+    text-align:center;
+    font-size:20px;
+    padding:0 30px 30px;
+}
+
+#Tiles > li:not(.finalcard) .noyes{
+    display:flex;
+    height:30%;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#Tiles > li:not(.finalcard) .no, #Tiles > li:not(.finalcard) .yes{
+    padding:30px 15px;
+    display:inline-block;
+    font-family:"Trade Gothic";
+
+}
+
+#Tiles > li:not(.finalcard) .no{
+    border-right:2px solid black;
+}
+
+#Tiles > li:not(.finalcard) .no::before{
+  position:relative;
+  top:-10px;
+  content:url({{"grey-arrow.png" | asset_img_url}});
+  opacity:.5;
+  margin-right:40px;
+  transition:opacity .4s;
+}
+
+#Tiles > li.removeArrows:not(.finalcard) .no::before,
+#Tiles > li.removeArrows:not(.finalcard) .yes::after{
+  opacity:0;
+}
+
+#Tiles > li:not(.finalcard) .yes::after{
+  position:relative;
+  top:-10px;
+  content:url({{"grey-arrow.png" | asset_img_url}});
+  opacity:.5;
+  margin-left:40px;
+  display:inline-block;
+  transform:scaleX(-1);
+}
+
+#Tiles > li:not(.finalcard) .cardBottom{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  bottom:0;
+  text-transform:lowercase;
+  border-top:1px solid rgba(255, 255, 255, .2);
+  width:calc(100% - 12px);
+  height:50px;
+  margin:0 6px;
+}
+
+#Tiles article{
+  padding-bottom:30px;
+}
+
+article h2{
+    font-size:2em;
+    text-transform:uppercase;
+    font-weight:500;
+}
+
+article .subheader{
+    margin:.8em 0;
+    <!-- font-size:1.4em; -->
+    font-style:italic;
+}
+
+article .symptomList{
+  list-style-type:none;
+  padding:0;
+  margin:0 0 1em 0;
+}
+
+article .symptomList li{
+  margin:10px 0;
+}
+
+article label{
+  color:#F55551;
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+article a{
+    display:inline-block;
+}
+
+article aside{
+  font-style:italic;
+}
+
+article cite{
+    display:block;
+    margin-bottom:1em;
+}
+
+article a, article h3, article h4, article aside{
+    margin-bottom:1em;
+}
+
+article cite a{
+    margin-bottom:0;
+    word-break:break-all;
+}
+
+article .ShopSection{
+  font-style:italic;
+  border-top:2px solid black;
+  padding-top:30px;
+  margin-top:50px;
+}
+
+article .ShopSection .ShopButtonContainer{
+  text-align:center;
+}
+
+article .ShopSection .ShopButton{
+  display:inline-block;
+  font-style:normal;
+  color:white;
+  border-radius:6px;
+  text-transform:uppercase;
+  max-width:320px;
+  margin:24px auto 0;
+  padding:10px 20px;
+  font-size:24px;
+  text-decoration: none;
+}
+
+article .ShopSection .ShopButton sup{
+  font-size:12px;
+}
+
+#PremenopauseCard article h2{
+    color:#3BCED9;
+}
+
+#PremenopauseCard h3{
+    color:#EDC322;
+}
+
+#EarlyMenopauseCard h2{
+    color:#EE5551;
+}
+
+#EarlyMenopauseCard h3{
+    color:#DF79A2;
+}
+
+#LateMenopauseCard h2{
+    color:#F493C2;
+}
+
+#LateMenopauseCard h3{
+    color:#00A89F;
+}
+
+#PostMenopauseCard h2{
+    color:#3DCB8C;
+}
+
+#PostMenopauseCard h3{
+    color:#87A1FE;
+}
+
+#SideContentActive{
+  display:none;
+}
+
+input[name='SideContentSelector']{
+  display:none;
+}
+
+#Sidebar{
+  display:none;
+  flex-direction:row;
+
+  height:100%;
+
+  position:fixed;
+  z-index:3;
+  top:0;
+  left:calc(100vw - 50px);
+
+  transition:left .5s ease-in-out;
+
+  pointer-events:none;
+}
+
+#Sidebar *{
+    pointer-events:all;
+}
+
+.menuActivator:checked ~ #Sidebar{
+  left:calc(100vw - 350px);
+}
+
+.articleSelector:checked ~ #Sidebar{
+  left:calc(50vw - 50px - 550px);
+}
+
+.menuActivator:checked ~ #Sidebar #ActivateMenu{
+  display:none;
+}
+
+.menuActivator:checked ~ #Sidebar #CloseMenu{
+  display:block;
+}
+
+.menuActivator:checked ~ #BackgroundSidebarToggle{
+  display:block;
+  opacity:.5;
+}
+
+
+#Sidebar #ActivateMenu, #Sidebar #CloseMenu{
+  margin-top:30px;
+  width:50px;
+  cursor:pointer;
+  margin-bottom:1000%;
+}
+
+#Sidebar #ActivateMenu{
+  line-height:50px;
+  font-size:25px;
+}
+
+#Sidebar #CloseMenu{
+  display:none;
+  line-height:40px;
+  font-size:50px;
+}
+
+#BackgroundSidebarToggle{
+  display:none;
+  position:fixed;
+  z-index:2;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  opacity:0;
+  cursor:pointer;
+  transition:opacity .5s;
+}
+
+#Sidebar #SideContent{
+  display:flex;
+  flex-direction:row;
+  background-color:white;
+  width:100vw;
+}
+
+#Sidebar #SideContent nav{
+  width:300px;
+  padding-left:50px;
+  padding-right:50px;
+}
+
+#Sidebar #SideContent nav header img{
+  margin:35px 50px 20px 0;
+}
+
+#Sidebar #SideContent nav #MoreInfo{
+  margin:40px 0 40px;
+}
+
+#Sidebar #SideContent #SymptomList{
+  list-style-type:none;
+  text-transform:uppercase;
+  padding:0;
+  margin:0;
+  font-size:20px;
+  font-weight:600;
+  color:#EE5551;
+}
+
+#Sidebar #SideContent #SymptomList li{
+  margin-top:12px;
+}
+
+#Sidebar #SideContent #SymptomList label{
+  cursor:pointer;
+}
+
+#Sidebar #SideContent article{
+  display:none;
+  max-width:800px;
+  max-height:100%;
+  padding:110px 0 50px;
+  overflow:auto;
+
+}
+
+#Sidebar #SideContent article .CollapsedArticleHeader{
+  display:none;
+}
+
+#Sidebar #SideContent article h2{
+  color:#EE5551;
+}
+
+#Sidebar #SideContent article h3{
+  color:#EDC322;
+}
+
+#SelectHotFlashesArticle:checked ~ #Sidebar #SideContent #HotFlashesArticle,
+#SelectVaginalDrynessArticle:checked ~ #Sidebar #SideContent #VaginalDrynessArticle,
+#SelectMoodSwingsArticle:checked ~ #Sidebar #SideContent #MoodSwingsArticle,
+#SelectBrainFogArticle:checked ~ #Sidebar #SideContent #BrainFogArticle,
+#SelectBoneDensityArticle:checked ~ #Sidebar #SideContent #BoneDensityArticle{
+  display:block;
+}
+
+@media(max-width:1250px){
+  #Tiles > li{
+    max-width:70vw;
+  }
+
+  #Tiles .undercard{
+    left:0;
+    right:0;
+    margin:auto;
+    border-top:none;
+    width:100%;
+    text-align:center;
+  }
+
+  #Tiles .undercard ul{
+    list-style-type:none;
+    padding-left:0;
+  }
+
+  #Tiles .undercard li::before{
+    content:"\25cf";
+  }
+
+  #Tiles .undercard h2{
+    display:block;
+  }
+
+  .menuActivator:checked ~ #Sidebar {
+    left:calc(100vw - 350px);
+  }
+
+  .articleSelector:checked ~ #Sidebar #CloseMenu{
+    display:none;
+  }
+
+  .articleSelector:checked ~ #Sidebar{
+    left:-300px;
+  }
+
+  #Sidebar #SideContent{
+    width:calc(100vw + 300px);
+  }
+
+  #Sidebar #SideContent article{
+    max-width: calc(100% - 300px);
+    height:100%;
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:0;
+  }
+
+  #Sidebar #SideContent article .CollapsedArticleHeader{
+    display:block;
+    padding-top:35px;
+    border-bottom:1px solid black;
+    padding-bottom:5px;
+  }
+
+  #Sidebar #SideContent .CollapsedArticleHeader .greenarrow{
+    padding:5px;
+    cursor:pointer;
+  }
+
+  #Sidebar #SideContent .CollapsedArticleHeader .greenarrow img{
+    transform:rotate(90deg) translateX(-15px);
+  }
+
+  #Sidebar #Sidecontent .CollapsedArticleHeader .headerimg{
+    height:50px;
+  }
+
+  #Sidebar #SideContent article .ArticleContent{
+    padding-top:10px;
+    height:calc(100% - 152px);
+    overflow:auto;
+  }
+
+  #Tiles .finalcard .downarrow{
+      display:flex;
+  }
+}
+
+@media(max-width:768px){
+    #Tiles > li{
+      max-width:800px;
+    }
+
+    #Tiles .finalcard .FinalCardHeader{
+        margin-left:0;
+        margin-right:0;
+        height:40px;
+    }
+
+    #Tiles > li.finalcard{
+        padding:0 15px;
+    }
+
+    #Tiles .finalcard .leftcolumn, #Tiles .finalcard .rightcolumn{
+        display:none;
+    }
+
+    #Tiles .columns{
+        max-height:calc(82vh - 85px);
+    }
+
+    #Tiles .centercolumn{
+        width:100%;
+    }
+
+    #Sidebar #SideContent article{
+      max-width: calc(100% - 300px);
+      padding-left:3vw;
+      padding-right:3vw;
+    }
+}
